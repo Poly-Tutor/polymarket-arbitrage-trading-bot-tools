@@ -11,9 +11,9 @@
 
 ## Who this is for
 
-- **Developers** who want readable Python, WebSocket market data, and CLOB execution patterns to study or extend.
+- **Developers** who want readable Python, WebSocket market data, and CLOB execution patterns to study or extend
 - **Traders** who understand that **no bot guarantees profit** and who will paper-test, size small, and own their risk.
-- **Clients / integrators** evaluating automation on Polymarket-compatible flows (wallet, API keys, redeem paths).
+- **Clients / integrators** evaluating automation on Polymarket-compatible flows (wallet, API keys, redeem paths)
 
 Everything here is provided **for education and experimentation**. Trading prediction markets can result in **total loss** of capital deployed. Past backtests or anecdotal results **do not** predict live performance.
 
