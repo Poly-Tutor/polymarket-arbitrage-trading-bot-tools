@@ -42,18 +42,31 @@ None of the following is investment advice; it is **mechanics**.
 - **Economic story:** In the last slice of a binary window, the “favorite” often trades at a **high implied probability** (e.g. $0.75–$0.88). If the crowd is **directionally right often enough**, buying the favorite can have **positive expectancy** even though each win is small in dollar terms per share.
 - **Why filters matter:** Requiring **deviation from VWAP** and **positive momentum** tries to avoid **chasing stale prices** and favors entries where **recent flow** supports the favorite.
 - **Failure modes:** Sharp reversals into the close, thin books, or regimes where **implied odds are miscalibrated** can make “favorite following” lose fast. Break-even win rate ≈ **entry price** (e.g. $0.82 entry ⇒ need ~82% wins before fees).
+- <img width="1224" height="487" alt="image" src="https://github.com/user-attachments/assets/450211b1-531f-4abc-aaf0-3d7ab28937d2" />
+- <img width="1204" height="702" alt="image" src="https://github.com/user-attachments/assets/250c75e5-93ea-4e04-9d29-9912a93deced" />
+
+
 
 ### 2. Late consensus + skew (Meridian / `late_v3`)
 
 - **Economic story:** Nearer expiry, **information about the fixing** is more concentrated in prices; the order book’s **ask skew** (`|up_ask − down_ask|`) is used as a **confidence** proxy. You trade **less time exposed** but pay **higher prices** when consensus is strong.
 - **Risk layer:** **Per-market investment cap**, **max entry price**, **stop-loss** (fixed or percent), and **flip-stop** (exit if your side loses “favorite” status) are explicit **risk overrides**—they can cap damage but also **stop out** before a recovery.
 - **Failure modes:** **Last-minute noise**, oracle quirks, or **one-sided liquidity** can flip perceived favorites. **Spread > ~$1.05** is treated as unreliable in the default logic.
+-  <img width="1159" height="522" alt="image" src="https://github.com/user-attachments/assets/e60063c1-67a4-4298-b72f-063ac2bfb94d" />
+-  <img width="1240" height="899" alt="image" src="https://github.com/user-attachments/assets/158b038c-2952-4fb6-9278-f3d6dfd1afe6" />
+
+
 
 ### 3. PTB distance + probability bands (5m/15m PTB bot)
 
 - **Economic story:** If **spot** is consistently **on one side of PTB** by **$X** late in the window, the **UP** or **DOWN** token may still be **underpriced** vs that physical gap—rules try to catch **alignment** between **oracle BTC**, **strike**, and **token price**.
 - **Risk layer:** After a fill, **take-profit** and **stop-loss** are defined in **probability space** (token price), aiming to **lock in gains** or **cut losses** before resolution.
 - **Failure modes:** **Lag** between feeds, **PTB definition** vs your intuition, and **simulation vs live** fill behavior. Always validate with **`SIMULATION_MODE=true`** first.
+
+- <img width="1369" height="914" alt="image" src="https://github.com/user-attachments/assets/1c1e654b-e79f-4f3f-b159-14681c07ac6c" />
+- <img width="1359" height="906" alt="image" src="https://github.com/user-attachments/assets/3291ca28-51a5-45e2-983f-748bd6bcbb76" />
+
+
 
 ---
 
