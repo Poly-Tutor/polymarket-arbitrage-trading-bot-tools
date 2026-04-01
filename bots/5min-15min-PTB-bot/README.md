@@ -5,7 +5,7 @@ A Python bot for Polymarket **BTC Up/Down** markets in **5-minute** or **15-minu
 | Resource | Link |
 |----------|------|
 | **Suite overview** | [Repository README](../../README.md) |
-| **GitHub** | [AlterEgoEth/polymarket-arbitrage-trading-bot-tools](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git) |
+| **GitHub** | [Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) |
 | **Telegram** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
 ---

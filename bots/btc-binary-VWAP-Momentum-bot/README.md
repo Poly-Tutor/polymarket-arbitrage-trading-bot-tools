@@ -2,7 +2,7 @@
 
 Automated trading bot for **Polymarket BTC Up/Down** binary markets (**5- or 15-minute** windows; set `market.interval_minutes` in `config.json`). It streams the CLOB via WebSocket, computes **VWAP**, **deviation**, **momentum**, and **z-score** on the **favorite** side, and fires **Fill-And-Kill (FAK)** entries when **all** conditions align. Optional **Good-Till-Date (GTD)** limits on the opposite token act as a **partial hedge** (advanced; off by default).
 
-**Suite:** This bot is part of the [AlterEgo Eth Polymarket suite](../../README.md). **Repository:** [github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git) · **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth)
+**Suite:** This bot is part of the [Poly-Tutor Polymarket suite](../../README.md). **Repository:** [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) · **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth)
 
 ---
 
@@ -90,7 +90,7 @@ python3 --version
 
 ```bash
 cd ~
-git clone https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git
+git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
 cd polymarket-arbitrage-trading-bot-tools/bots/btc-binary-VWAP-Momentum-bot
 ```
 

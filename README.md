@@ -4,7 +4,7 @@
 
 | Resource | Link |
 |----------|------|
-| **Repository** | [github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git) |
+| **Repository** | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) |
 | **Contact (Telegram)** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
 ---
@@ -128,7 +128,7 @@ These are **not** all shipped as drop-in folders in this public repository. For 
 ## Quick start (from clone)
 
 ```bash
-git clone https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git
+git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
 cd polymarket-arbitrage-trading-bot-tools
 # All bots live under bots/ — e.g. cd bots/5min-15min-PTB-bot
 ```
