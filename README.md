@@ -1,10 +1,10 @@
-# Polymarket Crypto Trading Bot Suite
+# Polymarket Arbitrage Trading Bot 
 
 **Educational and research tooling** for [Polymarket](https://polymarket.com) short-horizon crypto **Up / Down** markets. This repository bundles **three production-style Python bots** with different signal philosophies: microstructure + VWAP (BTC), multi-asset late consensus (BTC/ETH/SOL/XRP), and oracle-vs-strike (PTB) rules with optional intramarket exits.
 
 | Resource | Link |
 |----------|------|
-| **Repository** | [github.com/AlterEgoEth/polymarket-crypto-trading-bot](https://github.com/AlterEgoEth/polymarket-crypto-trading-bot.git) |
+| **Repository** | [github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git) |
 | **Contact (Telegram)** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
 ---
@@ -96,8 +96,8 @@ These are **not** all shipped as drop-in folders in this public repository. For 
 ## Quick start (from clone)
 
 ```bash
-git clone https://github.com/AlterEgoEth/polymarket-crypto-trading-bot.git
-cd polymarket-crypto-trading-bot
+git clone https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git
+cd polymarket-arbitrage-trading-bot-tools
 # All bots live under bots/ — e.g. cd bots/5min-15min-PTB-bot
 ```
 

@@ -2,7 +2,7 @@
 
 **Meridian** is the product name for this Python system: it trades **Polymarket 5- or 15-minute** crypto Up/Down markets for **BTC, ETH, SOL, and XRP** in parallel, using a **late-window entry** model (implementation: **Late Entry V3** / `late_v3`).
 
-| Suite | [github.com/AlterEgoEth/polymarket-crypto-trading-bot](https://github.com/AlterEgoEth/polymarket-crypto-trading-bot) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Top-level README](../../../README.md) |
+| Suite | [github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Top-level README](../../../README.md) |
 
 **Educational use:** This guide explains **mechanics**, **risk**, and **configuration**. It is **not** financial advice. **No edge is guaranteed.**
 
@@ -77,8 +77,8 @@ Polymarket offers crypto prediction markets that resolve every 15 minutes:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/AlterEgoEth/polymarket-crypto-trading-bot.git
-cd polymarket-crypto-trading-bot/bots/up-down-spread-bot
+git clone https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools.git
+cd polymarket-arbitrage-trading-bot-tools/bots/up-down-spread-bot
 ```
 
 ### Step 2: Create a Virtual Environment

@@ -1,6 +1,6 @@
 # Configuration Guide
 
-Part of the **[AlterEgo Eth Polymarket suite](https://github.com/AlterEgoEth/polymarket-crypto-trading-bot)** · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Suite README (all bots)](../../README.md)
+Part of the **[AlterEgo Eth Polymarket suite](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools)** · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Suite README (all bots)](../../README.md)
 
 This file explains **every parameter** in `config.json`. The bot is highly configurable -- you can fine-tune the strategy, risk, execution speed, hedging, and notifications without touching any code.
 

@@ -1,6 +1,6 @@
 # BTC 15-Minute Live Trading Bot - Complete Logic Documentation
 
-**Suite:** [AlterEgo Eth — polymarket-crypto-trading-bot](https://github.com/AlterEgoEth/polymarket-crypto-trading-bot) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [README](README.md) · [CONFIG.md](CONFIG.md)
+**Suite:** [AlterEgo Eth — polymarket-arbitrage-trading-bot-tools](https://github.com/AlterEgoEth/polymarket-arbitrage-trading-bot-tools) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [README](README.md) · [CONFIG.md](CONFIG.md)
 
 ## Table of Contents
 
