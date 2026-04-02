@@ -13,6 +13,26 @@ This suite is **educational and experimental**—not a promise of profit. Use **
 | **Repository** | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) |
 | **Contact (Telegram)** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
+The **[Poly-Tutor](https://github.com/Poly-Tutor)** org also publishes **Rust** Polymarket bots on **5m**, **15m**, and **1h** horizons with **different strategies** than this Python suite—see the table below.
+
+---
+
+## More Polymarket bots from Poly-Tutor (other strategies)
+
+This repository is the **Python** toolkit (VWAP, Meridian, PTB). The same org maintains separate repos optimized for **pair-cost / hedging**, **dump-and-hedge**, and **hourly pre-limit + merge** flows.
+
+| Timeframe | Repository | Language | Strategy (summary) |
+|-----------|------------|----------|-------------------|
+| **5 min** | [**5min-btc-polymarket-trading-bot**](https://github.com/Poly-Tutor/5min-btc-polymarket-trading-bot) | Rust | **BTC 5m** Up/Down: lock when **combined cost per pair** stays under your cap (e.g. Up + Down &lt; $1), plus **hedging**, expansion when the opposite side rises, **ride-the-winner**, and PnL rebalance. |
+| **15 min** | [**Polymarket-15min-arbitrage-bot**](https://github.com/Poly-Tutor/Polymarket-15min-arbitrage-bot) | Rust | **15m** Up/Down (BTC, ETH, SOL, XRP): **dump-and-hedge**—detect a sharp drop, leg in, then **hedge** when pair cost meets targets; optional production CLOB mode. |
+| **1 hour** | [**1hour-crypto-polymarket-trading-bot**](https://github.com/Poly-Tutor/1hour-crypto-polymarket-trading-bot) | Rust | **Hourly** Up/Down (BTC, ETH, SOL, XRP, Eastern Time): **limit buys** on both sides before the hour, optional **merge** for a small locked edge, **risk exit** if only one side fills. |
+
+Clone URLs:
+
+- `git clone https://github.com/Poly-Tutor/5min-btc-polymarket-trading-bot.git`
+- `git clone https://github.com/Poly-Tutor/Polymarket-15min-arbitrage-bot.git`
+- `git clone https://github.com/Poly-Tutor/1hour-crypto-polymarket-trading-bot.git`
+
 ---
 
 ## Why traders and developers use this Polymarket bot suite
@@ -28,6 +48,7 @@ If you want **additional strategies**, **custom deployment**, or **professional 
 
 ## Table of contents
 
+- [More Polymarket bots from Poly-Tutor (other strategies)](#more-polymarket-bots-from-poly-tutor-other-strategies)
 - [Features](#features)
 - [How it works](#how-it-works)
 - [Bots in this repository](#bots-in-this-repository)
