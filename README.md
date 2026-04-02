@@ -1,95 +1,161 @@
-# Polymarket Arbitrage Trading Bot 
+# Polymarket Trading Bot — Polymarket Arbitrage Trading Bot & Automation Toolkit
 
-**Educational and research tooling** for [Polymarket](https://polymarket.com) short-horizon crypto **Up / Down** markets. This repository bundles **three production-style Python bots** with different signal philosophies: microstructure + VWAP (BTC), multi-asset late consensus (BTC/ETH/SOL/XRP), and oracle-vs-strike (PTB) rules with optional intramarket exits.
+[![GitHub stars](https://img.shields.io/github/stars/Poly-Tutor/polymarket-arbitrage-trading-bot-tools?style=social)](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Polymarket](https://img.shields.io/badge/Polymarket-prediction%20markets-6366f1)](https://polymarket.com)
+
+**Polymarket trading bot** tooling for short-horizon crypto **Up / Down** markets: this repo ships **three** production-style Python **Polymarket bot** implementations you can run, study, and extend. Whether you search for a **polymarket arbitrage trading bot**, a **prediction market bot**, or a **Polymarket API bot** for automated execution, you get readable strategies, WebSocket market data, and CLOB-style order flow patterns built for speed and reliability in research and live-like testing.
+
+This suite is **educational and experimental**—not a promise of profit. Use **simulation / dry-run** first, size small, and own your risk.
 
 | Resource | Link |
 |----------|------|
-| **Repository** | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) |
+| **Repository** | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) |
 | **Contact (Telegram)** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
 ---
 
-## Who this is for
+## Why traders and developers use this Polymarket bot suite
 
-- **Developers** who want readable Python, WebSocket market data, and CLOB execution patterns to study or extend
-- **Traders** who understand that **no bot guarantees profit** and who will paper-test, size small, and own their risk.
-- **Clients / integrators** evaluating automation on Polymarket-compatible flows (wallet, API keys, redeem paths)
+- **Automation-first:** Each **automated trading bot** targets repeatable rules instead of manual clicking—ideal if you want a **crypto trading bot** workflow on a **prediction market bot** stack.
+- **Execution-aware design:** FAK/FOK patterns, retries, caps, and dashboards where applicable—built for traders who care about **latency, fills, and guardrails**.
+- **Three philosophies:** Microstructure + VWAP (BTC), multi-asset late consensus (BTC/ETH/SOL/XRP), and oracle-vs-strike (PTB)—so you can compare approaches in one **Polymarket trading bot** codebase.
+- **Developer-friendly:** Clear Python layout, per-bot READMEs, and env-driven config—extend signals or wire your own **arbitrage bot** and **Polymarket API bot** integrations.
 
-Everything here is provided **for education and experimentation**. Trading prediction markets can result in **total loss** of capital deployed. Past backtests or anecdotal results **do not** predict live performance.
+If you want **additional strategies**, **custom deployment**, or **professional risk and sizing** beyond this public suite, reach out on **[Telegram @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**. For **bots oriented toward live profitability**—more advanced signals, sizing, and execution—contact the same channel; availability and terms are discussed individually.
 
-If you want **additional strategies**, **custom deployment**, or **professional risk and sizing frameworks** beyond this open suite, reach out on **[Telegram @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**. If you are looking for **bots oriented toward live profitability**—more advanced signals, sizing, and execution than this public suite—**please contact the same Telegram**; what is available, how it is shared, and any terms are discussed **individually**
+---
+
+## Table of contents
+
+- [Features](#features)
+- [How it works](#how-it-works)
+- [Bots in this repository](#bots-in-this-repository)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Screenshots & demo](#screenshots--demo)
+- [Risk management snapshot](#risk-management-snapshot)
+- [Which Polymarket bot should I run?](#which-polymarket-bot-should-i-run)
+- [Roadmap](#roadmap)
+- [FAQ](#faq)
+- [Extended strategies (separate offerings)](#extended-strategies-separate-offerings)
+- [Disclaimer](#disclaimer)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## Features
+
+- **Multi-strategy Polymarket trading bot collection** — VWAP/momentum, late-window consensus with structured exits, and PTB-driven triggers.
+- **Polymarket API bot patterns** — REST + WebSocket usage, order execution helpers, and configs suitable for paper and small live tests.
+- **Risk controls** — dry run / simulation modes, investment caps, stop-loss and flip-stop (where implemented), entry windows, and spread or confidence gates.
+- **Dashboards & UX** — Rich terminal UI (VWAP bot), web dashboards (PTB and Meridian paths), logging for operational review.
+- **Educational depth** — Mechanics explained (why entries can work and how they can fail); aimed at serious traders and builders, not hype.
+
+---
+
+## How it works
+
+1. **Connect** — Configure wallet/API credentials and Polymarket-compatible endpoints per the bot README (never commit secrets).
+2. **Select a market window** — Short-horizon **5m / 15m** crypto Up/Down markets; parameters differ by **polymarket bot** (BTC-only vs multi-asset).
+3. **Ingest & signal** — Live quotes and/or oracle-aligned inputs feed rules (VWAP deviation, late-book skew, PTB vs spot distance, etc.).
+4. **Execute with guardrails** — Orders respect caps, max prices, simulation flags, and stop logic—treat this as an **automated trading bot** with explicit failure modes, not magic alpha.
+
+None of this is investment advice; it is **mechanics** and software behavior.
 
 ---
 
 ## Bots in this repository
 
-All runnable bots live under [`bots/`](bots/). Each folder has its own **README** (and Meridian has a deep dive under `docs/`). Start there for install paths, env vars, and config.
+All runnable bots live under [`bots/`](bots/). Each folder has its own **README**, `requirements.txt`, and configuration (`.env` / `config.json` / `config.env`).
 
 | Directory | Focus | Markets | Core idea |
 |-----------|--------|---------|-----------|
-| [`bots/btc-binary-VWAP-Momentum-bot/`](bots/btc-binary-VWAP-Momentum-bot/) | VWAP, deviation, momentum, z-score | BTC **5m** or **15m** | Enter the **favorite** only when price has **pulled above VWAP** with **positive momentum** inside a **late, narrow time window**—filtering for “consensus + short-term continuation.” |
-| [`bots/up-down-spread-bot/`](bots/up-down-spread-bot/) (**Meridian**) | Late Entry V3 (`late_v3`) | BTC, ETH, SOL, XRP — **5m** or **15m** | In the **last minutes**, buy the side the book **already favors**, but only if **spread** and **confidence** (ask skew) pass sanity checks; **stop-loss** and **flip-stop** cut bad paths before expiry. |
-| [`bots/5min-15min-PTB-bot/`](bots/5min-15min-PTB-bot/) | PTB diff + probability triggers | BTC **5m** or **15m** | Compare **live BTC** to Polymarket’s **price-to-beat (PTB)** for the window; fire when **time**, **dollar diff**, and **implied probability** align; manage risk with **take-profit / stop-loss** on token prices. |
+| [`bots/btc-binary-VWAP-Momentum-bot/`](bots/btc-binary-VWAP-Momentum-bot/) | VWAP, deviation, momentum, z-score | BTC **5m** or **15m** | Enter the **favorite** when price has **pulled above VWAP** with **positive momentum** in a **late, narrow window**—filtering for “consensus + short-term continuation.” |
+| [`bots/up-down-spread-bot/`](bots/up-down-spread-bot/) (**Meridian**) | Late Entry V3 (`late_v3`) | BTC, ETH, SOL, XRP — **5m** or **15m** | In the **last minutes**, buy the side the book **already favors**, if **spread** and **confidence** (ask skew) pass checks; **stop-loss** and **flip-stop** cut bad paths before expiry. |
+| [`bots/5min-15min-PTB-bot/`](bots/5min-15min-PTB-bot/) | PTB diff + probability triggers | BTC **5m** or **15m** | Compare **live BTC** to Polymarket’s **price-to-beat (PTB)**; fire when **time**, **dollar diff**, and **implied probability** align; manage risk with **take-profit / stop-loss** on token prices. |
+
+Suite index: [`bots/README.md`](bots/README.md).
 
 ---
 
-## Why these approaches can make money (and when they do not)
+## Installation
 
-None of the following is investment advice; it is **mechanics**.
+```bash
+git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
+cd polymarket-arbitrage-trading-bot-tools
+```
 
-### 1. VWAP + momentum (BTC binary bot)
+Then enter the bot you want and create a virtual environment:
 
-- **Economic story:** In the last slice of a binary window, the “favorite” often trades at a **high implied probability** (e.g. $0.75–$0.88). If the crowd is **directionally right often enough**, buying the favorite can have **positive expectancy** even though each win is small in dollar terms per share.
-- **Why filters matter:** Requiring **deviation from VWAP** and **positive momentum** tries to avoid **chasing stale prices** and favors entries where **recent flow** supports the favorite.
-- **Failure modes:** Sharp reversals into the close, thin books, or regimes where **implied odds are miscalibrated** can make “favorite following” lose fast. Break-even win rate ≈ **entry price** (e.g. $0.82 entry ⇒ need ~82% wins before fees).
-##### how to run this bot.
+```bash
+cd bots/<bot-folder>
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+```
 
+Follow the **README inside that bot** for exact entrypoints, dependencies, and any extra setup (dashboards, env files).
+
+---
+
+## Usage
+
+1. Pick a bot under [`bots/`](bots/) and open its README (e.g. [`bots/btc-binary-VWAP-Momentum-bot/README.md`](bots/btc-binary-VWAP-Momentum-bot/README.md)).
+2. Copy example config / `.env` as documented; set **`SIMULATION_MODE`** or **dry run** when offered.
+3. Run the documented command (often `python main.py` or the bot-specific script—see each README).
+4. Monitor logs and dashboards; scale size only after you trust behavior end-to-end.
+
+**Operational hygiene:** dedicated wallet, **never commit keys**, private **RPC** where relevant, monitor **logs**, start with **minimum size**.
+
+---
+
+## Configuration
+
+Configuration is **per bot**:
+
+- **Environment variables** — API keys, RPC URLs, Telegram hooks, simulation flags (see each bot’s `.env.example` or README).
+- **JSON / config files** — Market choice, windows, price bands, bet sizing, stop-loss and flip-stop parameters.
+- **Runtime flags** — Some bots expose CLI flags (e.g. web dashboard); check the bot README.
+
+You can run more than one **polymarket trading bot** only if you understand **collateral**, **nonce / rate limits**, and **position overlap**—typically use **separate wallets** or **non-overlapping** markets.
+
+---
+
+## Screenshots & demo
+
+Visual references for dashboards and flows (replace or extend with your own recordings as the **Polymarket arbitrage trading bot** suite evolves).
+
+### VWAP / momentum (BTC binary bot)
 
 https://github.com/user-attachments/assets/4c528411-6d88-4843-adf8-26c26f63288e
 
+<img width="1224" height="487" alt="Polymarket trading bot VWAP momentum dashboard" src="https://github.com/user-attachments/assets/450211b1-531f-4abc-aaf0-3d7ab28937d2" />
 
-  <img width="1224" height="487" alt="image" src="https://github.com/user-attachments/assets/450211b1-531f-4abc-aaf0-3d7ab28937d2" />
-  
-  <img width="1204" height="702" alt="image" src="https://github.com/user-attachments/assets/250c75e5-93ea-4e04-9d29-9912a93deced" />
+<img width="1204" height="702" alt="Polymarket bot terminal UI" src="https://github.com/user-attachments/assets/250c75e5-93ea-4e04-9d29-9912a93deced" />
 
-
-
-### 2. Late consensus + skew (Meridian / `late_v3`)
-
-- **Economic story:** Nearer expiry, **information about the fixing** is more concentrated in prices; the order book’s **ask skew** (`|up_ask − down_ask|`) is used as a **confidence** proxy. You trade **less time exposed** but pay **higher prices** when consensus is strong.
-- **Risk layer:** **Per-market investment cap**, **max entry price**, **stop-loss** (fixed or percent), and **flip-stop** (exit if your side loses “favorite” status) are explicit **risk overrides**—they can cap damage but also **stop out** before a recovery.
-- **Failure modes:** **Last-minute noise**, oracle quirks, or **one-sided liquidity** can flip perceived favorites. **Spread > ~$1.05** is treated as unreliable in the default logic.
-##### how to run this bot.
-
+### Meridian / late consensus (`late_v3`)
 
 https://github.com/user-attachments/assets/c811e320-3a0a-4cbe-9cec-8b7a42c0cf6d
 
+<img width="1159" height="522" alt="Polymarket arbitrage trading bot Meridian spread view" src="https://github.com/user-attachments/assets/e60063c1-67a4-4298-b72f-063ac2bfb94d" />
 
-  <img width="1159" height="522" alt="image" src="https://github.com/user-attachments/assets/e60063c1-67a4-4298-b72f-063ac2bfb94d" />
+<img width="1240" height="899" alt="Prediction market bot multi-asset dashboard" src="https://github.com/user-attachments/assets/158b038c-2952-4fb6-9278-f3d6dfd1afe6" />
 
-  <img width="1240" height="899" alt="image" src="https://github.com/user-attachments/assets/158b038c-2952-4fb6-9278-f3d6dfd1afe6" />
-
-
-
-### 3. PTB distance + probability bands (5m/15m PTB bot)
-
-- **Economic story:** If **spot** is consistently **on one side of PTB** by **$X** late in the window, the **UP** or **DOWN** token may still be **underpriced** vs that physical gap—rules try to catch **alignment** between **oracle BTC**, **strike**, and **token price**.
-- **Risk layer:** After a fill, **take-profit** and **stop-loss** are defined in **probability space** (token price), aiming to **lock in gains** or **cut losses** before resolution.
-- **Failure modes:** **Lag** between feeds, **PTB definition** vs your intuition, and **simulation vs live** fill behavior. Always validate with **`SIMULATION_MODE=true`** first.
-##### how to run this bot.
+### PTB bot (5m / 15m)
 
 https://github.com/user-attachments/assets/bfdf7590-5458-4883-88cf-b8343a316f6f
 
+<img width="1369" height="914" alt="Polymarket API bot PTB web dashboard" src="https://github.com/user-attachments/assets/1c1e654b-e79f-4f3f-b159-14681c07ac6c" />
 
- <img width="1369" height="914" alt="image" src="https://github.com/user-attachments/assets/1c1e654b-e79f-4f3f-b159-14681c07ac6c" />
- 
- <img width="1359" height="906" alt="image" src="https://github.com/user-attachments/assets/3291ca28-51a5-45e2-983f-748bd6bcbb76" />
-
-
+<img width="1359" height="906" alt="Automated trading bot PTB controls" src="https://github.com/user-attachments/assets/3291ca28-51a5-45e2-983f-748bd6bcbb76" />
 
 ---
 
-## Risk management (summary)
+## Risk management snapshot
 
 | Bot | Primary levers |
 |-----|----------------|
@@ -97,11 +163,9 @@ https://github.com/user-attachments/assets/bfdf7590-5458-4883-88cf-b8343a316f6f
 | **Meridian** | **Dry run**, **max order / total investment**, **entry window**, **confidence** and **spread** gates, **stop-loss**, **flip-stop**, **entry frequency**, **FAK / FOK** execution behavior. |
 | **PTB bot** | **Simulation mode**, **per-trade USDC**, **TP/SL** on probability, **trigger** windows, **market lag** limits, **loop** cadence. |
 
-**Operational hygiene:** dedicated wallet, **never commit keys**, private **RPC**, monitor **logs**, start with **minimum size**.
-
 ---
 
-## When to use which bot
+## Which Polymarket bot should I run?
 
 | Situation | Sensible starting point |
 |-----------|-------------------------|
@@ -109,40 +173,77 @@ https://github.com/user-attachments/assets/bfdf7590-5458-4883-88cf-b8343a316f6f
 | You want **several coins** from **one wallet** and **late-window consensus** with **structured exits** | `bots/up-down-spread-bot` (Meridian) |
 | You care about **PTB vs Chainlink BTC** and **rule-based** triggers with a **web dashboard** | `bots/5min-15min-PTB-bot` |
 
-You can run more than one bot **only if** you understand **collateral**, **nonce / rate limits**, and **position overlap**—typically use **separate wallets** or **non-overlapping** markets.
+---
+
+## Roadmap
+
+- Broader **paper-trading** defaults and clearer “first run” checklists per bot.
+- Additional **observability** (structured logs, optional metrics hooks) for production-minded users of this **crypto trading bot** toolkit.
+- Documentation cross-links and version pins where it helps reproducibility.
+- Community-driven examples (strategies as plugins) where it fits the architecture.
 
 ---
 
-## Extended strategies & quant stack (separate offerings)
+## FAQ
 
-Beyond the three open-source-style bots in this tree, **AlterEgo Eth** maintains **additional strategies** used in professional workflows, including:
+### What is a Polymarket trading bot?
 
-- **Position sizing & sequences:** martingale, anti-martingale, Fibonacci scaling (each with different **blow-up** and **recovery** profiles—**not** risk-free).
-- **Technical analysis:** RSI, MACD, Bollinger Bands (and combinations with **regime filters**).
-- **Probabilistic & execution-aware models:** Bayesian updating of beliefs, **edge** estimation vs market price, **spread** and liquidity-aware quoting, **Avellaneda–Stoikov–style** inventory / skew control, **Kelly**-style sizing (often **fractional Kelly** in practice), **Monte Carlo** scenario analysis for drawdown and tail risk.
+A **Polymarket trading bot** is software that connects to Polymarket’s APIs, reads market data, and places or manages orders according to rules—so you can automate entries, exits, and risk limits instead of trading only by hand.
 
-These are **not** all shipped as drop-in folders in this public repository. For **access, customization, licensing, or collaboration**, contact **[Telegram: @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**.
+### Is this a polymarket arbitrage trading bot?
+
+This repository is framed as **polymarket arbitrage trading bot** *tooling*: strategies that seek **edge** in short-horizon Up/Down markets using execution and timing rules. It is **not** a guarantee of arbitrage in the strict sense on every tick—**slippage, fees, and adverse selection** apply.
+
+### How is this different from a generic crypto trading bot?
+
+A **crypto trading bot** on CEXes trades spot or perps; this suite is built for **prediction market** mechanics on Polymarket (binary outcomes, CLOB, resolution). The overlap is **automation and risk controls**; the market model is different.
+
+### Do I need a Polymarket API bot setup?
+
+Yes, for serious automation you should plan for API keys, signing, and rate-limit-aware clients. These bots follow **Polymarket API bot** patterns (REST/WebSocket, order helpers)—see each subfolder README for specifics.
+
+### Can I use this as a fully automated trading bot out of the box?
+
+You can run the code and automation paths, but you must **configure** markets, sizes, and risk. Start with **simulation / dry-run**, validate fills and logs, then scale. **No automated trading bot** removes market or operational risk.
+
+### Is this prediction market bot software safe?
+
+Software has bugs; markets have tail risk. Use small size, isolated wallets, and monitoring. Past backtests or demos **do not** predict live results.
+
+### Who is this for?
+
+**Developers** who want to learn or extend a **polymarket bot**, and **traders** who accept that **no bot guarantees profit** and who will test responsibly.
+
+### Where do I get help or custom strategies?
+
+For **custom deployment**, **additional strategies**, or **professional risk frameworks**, contact **[Telegram @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**.
 
 ---
 
-## Quick start (from clone)
+## Extended strategies (separate offerings)
 
-```bash
-git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools
-# All bots live under bots/ — e.g. cd bots/5min-15min-PTB-bot
-```
-
-Then open the **README** inside the bot you want (or start from [`bots/README.md`](bots/README.md)):
-
-- `bots/btc-binary-VWAP-Momentum-bot/README.md`
-- `bots/up-down-spread-bot/README.md` (overview) and `bots/up-down-spread-bot/docs/README.md` (full guide)
-- `bots/5min-15min-PTB-bot/README.md`
+Beyond these three open folders, **AlterEgo Eth** works on advanced quant-style ideas (sizing sequences, TA combinations, execution-aware models, inventory/skew concepts, Monte Carlo for drawdown, etc.). These are **not** all shipped as drop-in modules here. For **access, customization, or collaboration**, use **[Telegram: @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**.
 
 ---
 
-## License & disclaimer
+## Disclaimer
 
-Individual bots may ship their own **LICENSE**; where none is specified, treat usage as **at your own risk**. Authors and contributors are **not** responsible for trading losses, bugs, exchange rule changes, or regulatory issues in your jurisdiction.
+Trading prediction markets can result in **total loss** of capital deployed. Everything here is provided **for education and experimentation**. Authors and contributors are **not** responsible for trading losses, bugs, exchange or protocol rule changes, or regulatory issues in your jurisdiction.
 
 **Not financial advice.** **No warranty.** Use **simulation / dry-run** until you trust the full stack.
+
+---
+
+## License
+
+Individual bots may ship their own **LICENSE**; where none is specified, treat usage as **at your own risk**.
+
+---
+
+## Contact
+
+- **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth)
+
+---
+
+**If this Polymarket trading bot toolkit is useful, please star the repo** to improve discoverability for other builders and traders—and open issues if you want to contribute improvements to docs or code.
