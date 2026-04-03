@@ -268,3 +268,4 @@ Individual bots may ship their own **LICENSE**; where none is specified, treat u
 ---
 
 **If this Polymarket trading bot toolkit is useful, please star the repo** to improve discoverability for other builders and traders—and open issues if you want to contribute improvements to docs or code.
+ .
