@@ -33,6 +33,31 @@ Clone URLs:
 - `git clone https://github.com/Poly-Tutor/Polymarket-15min-arbitrage-bot.git`
 - `git clone https://github.com/Poly-Tutor/1hour-crypto-polymarket-trading-bot.git`
 
+
+---
+
+**Proof**
+![photo_2026-02-26_11-48-37](https://github.com/user-attachments/assets/edd8e6ef-7e9d-4c7d-883a-5193274e5235)
+
+![photo_2026-02-26_11-48-43](https://github.com/user-attachments/assets/6016d9bc-6ba8-465d-ae9b-843116f8ed95)
+
+![photo_2026-02-26_11-48-47](https://github.com/user-attachments/assets/6d91f233-5cde-4779-af2a-949bb384b979)
+
+<img width="1420" height="875" alt="5min-3-6-1" src="https://github.com/user-attachments/assets/51ff0a72-2d97-4c38-b703-22dc2c4cf7a6" />
+<img width="1307" height="781" alt="5min-3-6" src="https://github.com/user-attachments/assets/e73b00a1-5893-4d0e-94ae-6086ba81340c" />
+
+
+
+
+https://github.com/user-attachments/assets/29ae399d-6ee1-455a-8caf-e30deef7eae7
+
+
+https://github.com/user-attachments/assets/f17f4012-557d-4e58-ad82-6b705cdbecc0
+
+
+https://github.com/user-attachments/assets/0e9bfcf2-950a-41bc-8318-a20f8de78866
+
+---
 ---
 
 ## Why traders and developers use this Polymarket bot suite
