@@ -1,6 +1,6 @@
 # BTC 15-Minute Polymarket Bot — Full Beginner Guide
 
-**Suite:** [Poly-Tutor — polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) · **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · **Parent overview:** [`../README.md`](../README.md)
+**Suite:** [Poly-Tutor — polymarket-5min-15min-1hour-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools) · **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · **Parent overview:** [`../README.md`](../README.md)
 
 This document walks you from **zero to running**, explains the **trading strategy** with **numbers**, and lists **every important parameter** with **examples**.  
 Shorter references: [`CONFIG.md`](../CONFIG.md) (parameter list), [`PROJECT_LOGIC.md`](../PROJECT_LOGIC.md) (implementation detail).
@@ -239,14 +239,14 @@ python3 --version
 If you already have the folder (`btc-binary-VWAP-Momentum-bot`), **cd** into it:
 
 ```bash
-cd "path/to/polymarket-arbitrage-trading-bot-tools/btc-binary-VWAP-Momentum-bot"
+cd "path/to/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools/btc-binary-VWAP-Momentum-bot"
 ```
 
 If you clone from git:
 
 ```bash
-git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools/btc-binary-VWAP-Momentum-bot
+git clone https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools.git
+cd polymarket-5min-15min-1hour-arbitrage-trading-bot-tools/btc-binary-VWAP-Momentum-bot
 ```
 
 ### 6.2 Create and activate a virtual environment
@@ -547,7 +547,7 @@ Output image: **`logs/pnl_chart.png`** (see `chart_pnl.py`).
 - **Fees, slippage, and failed orders** happen.  
 - **Protect your private key** — treat `.env` like a password.
 
-For **multi-asset late-entry** trading, see **Meridian** (`up-down-spread-bot`) in the same repository. For **PTB / oracle-diff** rules and a web dashboard, see `5min-15min-PTB-bot`. Extended **quant** offerings (Kelly, Monte Carlo, advanced TA, sizing systems) are described in the [repository root README](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) — contact [@AlterEgo_Eth](https://t.me/AlterEgo_Eth).
+For **multi-asset late-entry** trading, see **Meridian** (`up-down-spread-bot`) in the same repository. For **PTB / oracle-diff** rules and a web dashboard, see `5min-15min-PTB-bot`. Extended **quant** offerings (Kelly, Monte Carlo, advanced TA, sizing systems) are described in the [repository root README](https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools) — contact [@AlterEgo_Eth](https://t.me/AlterEgo_Eth).
 
 ---
 

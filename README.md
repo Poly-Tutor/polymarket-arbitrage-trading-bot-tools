@@ -136,8 +136,8 @@ All runnable bots live as **top-level folders** next to this README. Each has it
 ## Installation
 
 ```bash
-git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools
+git clone https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools.git
+cd polymarket-5min-15min-1hour-arbitrage-trading-bot-tools
 ```
 
 Then enter the bot you want and create a virtual environment:

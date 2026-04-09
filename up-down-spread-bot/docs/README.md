@@ -2,7 +2,7 @@
 
 **Meridian** is the product name for this Python system: it trades **Polymarket 5- or 15-minute** crypto Up/Down markets for **BTC, ETH, SOL, and XRP** in parallel, using a **late-window entry** model (implementation: **Late Entry V3** / `late_v3`).
 
-| Suite | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Top-level README](../../README.md) |
+| Suite | [github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Top-level README](../../README.md) |
 
 **Educational use:** This guide explains **mechanics**, **risk**, and **configuration**. It is **not** financial advice. **No edge is guaranteed.**
 
@@ -77,8 +77,8 @@ Polymarket offers crypto prediction markets that resolve every 15 minutes:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools/up-down-spread-bot
+git clone https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools.git
+cd polymarket-5min-15min-1hour-arbitrage-trading-bot-tools/up-down-spread-bot
 ```
 
 ### Step 2: Create a Virtual Environment

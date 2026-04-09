@@ -6,7 +6,7 @@ Automated execution for Polymarket **5- or 15-minute** crypto Up/Down markets. R
 |----------|------|
 | **Suite overview** | [Repository README](../README.md) |
 | **Full guide** | [docs/README.md](docs/README.md) |
-| **GitHub** | [Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) |
+| **GitHub** | [Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools.git) |
 | **Telegram** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
 ---
@@ -66,8 +66,8 @@ Automated execution for Polymarket **5- or 15-minute** crypto Up/Down markets. R
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools/up-down-spread-bot
+git clone https://github.com/Poly-Tutor/polymarket-5min-15min-1hour-arbitrage-trading-bot-tools.git
+cd polymarket-5min-15min-1hour-arbitrage-trading-bot-tools/up-down-spread-bot
 ```
 
 ### 2. Create Virtual Environment
