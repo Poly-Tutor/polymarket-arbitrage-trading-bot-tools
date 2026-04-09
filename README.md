@@ -3,8 +3,7 @@
 **Polymarket trading bot** tooling for short-horizon crypto **Up / Down** markets: this repo ships **three** production-style Python **Polymarket bot** implementations you can run, study, and extend. Whether you search for a **polymarket arbitrage trading bot**, a **prediction market bot**, or a **Polymarket API bot** for automated execution, you get readable strategies, WebSocket market data, and CLOB-style order flow patterns built for speed and reliability in research and live-like testing.
 
  **Contact (Telegram)**- [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) 
-
-The **[Poly-Tutor](https://github.com/Poly-Tutor)** org also publishes **Rust** Polymarket bots on **5m**, **15m**, and **1h** horizons with **different strategies** than this Python suite—see the table below.
+These bots are for educational purposes only. If you're interested in a more advanced or profitable solution, feel free to contact me. I’d be happy to discuss the details and provide full technical support.
 
 **Proof**
 ![photo_2026-02-26_11-48-37](https://github.com/user-attachments/assets/edd8e6ef-7e9d-4c7d-883a-5193274e5235)
@@ -193,6 +192,7 @@ You can run more than one **polymarket trading bot** only if you understand **co
 
 ## More Polymarket bots from Poly-Tutor (other strategies)
 
+The **[Poly-Tutor](https://github.com/Poly-Tutor)** org also publishes **Rust** Polymarket bots on **5m**, **15m**, and **1h** horizons with **different strategies** than this Python suite—see the table below.
 This repository is the **Python** toolkit (VWAP, Meridian, PTB). The same org maintains separate repos optimized for **pair-cost / hedging**, **dump-and-hedge**, and **hourly pre-limit + merge** flows.
 
 | Timeframe | Repository | Language | Strategy (summary) |
