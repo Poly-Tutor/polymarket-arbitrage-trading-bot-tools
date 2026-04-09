@@ -1,17 +1,10 @@
 # Polymarket 5min, 15min, 1hour Trading Bot — Polymarket Arbitrage Trading Bot & Automation Toolkit
 
-
-
 **Polymarket trading bot** tooling for short-horizon crypto **Up / Down** markets: this repo ships **three** production-style Python **Polymarket bot** implementations you can run, study, and extend. Whether you search for a **polymarket arbitrage trading bot**, a **prediction market bot**, or a **Polymarket API bot** for automated execution, you get readable strategies, WebSocket market data, and CLOB-style order flow patterns built for speed and reliability in research and live-like testing.
-
-This suite is **educational and experimental**. Use **simulation / dry-run** first, size small, and own your risk.
-
 
  **Contact (Telegram)**- [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) 
 
 The **[Poly-Tutor](https://github.com/Poly-Tutor)** org also publishes **Rust** Polymarket bots on **5m**, **15m**, and **1h** horizons with **different strategies** than this Python suite—see the table below.
-
-
 
 **Proof**
 ![photo_2026-02-26_11-48-37](https://github.com/user-attachments/assets/edd8e6ef-7e9d-4c7d-883a-5193274e5235)
@@ -267,7 +260,9 @@ For **custom deployment**, **additional strategies**, or **professional risk fra
 Beyond these three open folders, **AlterEgo Eth** works on advanced quant-style ideas (sizing sequences, TA combinations, execution-aware models, inventory/skew concepts, Monte Carlo for drawdown, etc.). These are **not** all shipped as drop-in modules here. For **access, customization, or collaboration**, use **[Telegram: @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**.
 
 ---
+This suite is **educational and experimental**. Use **simulation / dry-run** first, size small, and own your risk.
 
+---
 ## Disclaimer
 
 Trading prediction markets can result in **total loss** of capital deployed. Everything here is provided **for education and experimentation**. Authors and contributors are **not** responsible for trading losses, bugs, exchange or protocol rule changes, or regulatory issues in your jurisdiction.
