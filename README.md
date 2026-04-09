@@ -3,6 +3,7 @@
 **Polymarket trading bot** tooling for short-horizon crypto **Up / Down** markets: this repo ships **three** production-style Python **Polymarket bot** implementations you can run, study, and extend. Whether you search for a **polymarket arbitrage trading bot**, a **prediction market bot**, or a **Polymarket API bot** for automated execution, you get readable strategies, WebSocket market data, and CLOB-style order flow patterns built for speed and reliability in research and live-like testing.
 
  **Contact (Telegram)**- [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) 
+ 
 These bots are for educational purposes only. If you're interested in a more advanced or profitable solution, feel free to contact me. I’d be happy to discuss the details and provide full technical support.
 
 **Proof**
