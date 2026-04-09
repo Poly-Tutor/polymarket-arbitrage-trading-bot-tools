@@ -4,7 +4,7 @@ A Python bot for Polymarket **BTC Up/Down** markets in **5-minute** or **15-minu
 
 | Resource | Link |
 |----------|------|
-| **Suite overview** | [Repository README](../../README.md) |
+| **Suite overview** | [Repository README](../README.md) |
 | **GitHub** | [Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) |
 | **Telegram** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
 
@@ -39,8 +39,8 @@ A Python bot for Polymarket **BTC Up/Down** markets in **5-minute** or **15-minu
 
 | Use this bot when… | Consider another suite bot when… |
 |--------------------|----------------------------------|
-| You care about **PTB vs BTC** and **explicit trigger rows** (`CONDITION_1` … `CONDITION_4`) | You want **multi-asset** late consensus → **Meridian** (`bots/up-down-spread-bot`) |
-| You want a **web dashboard** at `http://localhost:5080` (default) | You want a **Rich terminal** + **VWAP/momentum** → `bots/btc-binary-VWAP-Momentum-bot` |
+| You care about **PTB vs BTC** and **explicit trigger rows** (`CONDITION_1` … `CONDITION_4`) | You want **multi-asset** late consensus → **Meridian** (`up-down-spread-bot`) |
+| You want a **web dashboard** at `http://localhost:5080` (default) | You want a **Rich terminal** + **VWAP/momentum** → `btc-binary-VWAP-Momentum-bot` |
 | You will **paper** first with `SIMULATION_MODE=true` | You need **only** redeem / manual tools—trim features accordingly |
 
 ---
@@ -134,4 +134,4 @@ This folder ships the **PTB / diff / probability** design. **Separate profession
 
 ## Disclaimer
 
-**Educational and research use only.** You are solely responsible for trading outcomes. **No warranty.** Prediction markets can **zero** your position. Never share **private keys** or **API secrets**. See the [repository README](../../README.md) for the full three-bot map and risk overview.
+**Educational and research use only.** You are solely responsible for trading outcomes. **No warranty.** Prediction markets can **zero** your position. Never share **private keys** or **API secrets**. See the [repository README](../README.md) for the full three-bot map and risk overview.

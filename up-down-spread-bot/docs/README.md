@@ -2,7 +2,7 @@
 
 **Meridian** is the product name for this Python system: it trades **Polymarket 5- or 15-minute** crypto Up/Down markets for **BTC, ETH, SOL, and XRP** in parallel, using a **late-window entry** model (implementation: **Late Entry V3** / `late_v3`).
 
-| Suite | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Top-level README](../../../README.md) |
+| Suite | [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools) · [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) · [Top-level README](../../README.md) |
 
 **Educational use:** This guide explains **mechanics**, **risk**, and **configuration**. It is **not** financial advice. **No edge is guaranteed.**
 
@@ -78,7 +78,7 @@ Polymarket offers crypto prediction markets that resolve every 15 minutes:
 
 ```bash
 git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools/bots/up-down-spread-bot
+cd polymarket-arbitrage-trading-bot-tools/up-down-spread-bot
 ```
 
 ### Step 2: Create a Virtual Environment
@@ -857,7 +857,7 @@ This prevents the bot from making exit decisions on stale or corrupted data.
 ## 14. Project Structure
 
 ```
-bots/up-down-spread-bot/
+up-down-spread-bot/
 ├── src/
 │   ├── main.py                    # Entry point, main loop, callbacks, config loading
 │   ├── market_config.py           # market_window "5m"/"15m" → market_interval_sec
@@ -947,4 +947,4 @@ The bot auto-reconnects between market windows. If connections drop frequently:
 
 ## Disclaimer
 
-This software is for **educational purposes only**. Trading on prediction markets involves **substantial risk of loss**. Past performance **does not** indicate future results. Use at your own risk and never trade with money you cannot afford to lose. **Extended strategies** (martingale / anti-martingale / Fibonacci sizing, full TA stacks, Bayesian edge, Avellaneda–Stoikov-style inventory, Kelly, Monte Carlo, and related) are offered **separately**—see the [repository README](../../../README.md) and Telegram [@AlterEgo_Eth](https://t.me/AlterEgo_Eth).
+This software is for **educational purposes only**. Trading on prediction markets involves **substantial risk of loss**. Past performance **does not** indicate future results. Use at your own risk and never trade with money you cannot afford to lose. **Extended strategies** (martingale / anti-martingale / Fibonacci sizing, full TA stacks, Bayesian edge, Avellaneda–Stoikov-style inventory, Kelly, Monte Carlo, and related) are offered **separately**—see the [repository README](../../README.md) and Telegram [@AlterEgo_Eth](https://t.me/AlterEgo_Eth).

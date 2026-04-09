@@ -4,7 +4,7 @@ Automated execution for Polymarket **5- or 15-minute** crypto Up/Down markets. R
 
 | Resource | Link |
 |----------|------|
-| **Suite overview** | [Repository README](../../README.md) |
+| **Suite overview** | [Repository README](../README.md) |
 | **Full guide** | [docs/README.md](docs/README.md) |
 | **GitHub** | [Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) |
 | **Telegram** | [@AlterEgo_Eth](https://t.me/AlterEgo_Eth) |
@@ -19,7 +19,7 @@ Automated execution for Polymarket **5- or 15-minute** crypto Up/Down markets. R
 
 **Risk controls:** **Dry run**, **per-order and per-market caps**, **stop-loss** (fixed $ or % of stake), **flip-stop** when your side loses leadership, **entry cooldown**, and validated prices before exits (fresh book, ask sum in range). See [docs/README.md](docs/README.md) for exact formulas.
 
-**When to use:** You want **several coins**, **one wallet**, **terminal + optional web dashboard**, and **explicit exit rules**. **When not to:** You need **BTC-only VWAP/momentum** filters—use `bots/btc-binary-VWAP-Momentum-bot`—or **PTB vs spot diff** rules—use `bots/5min-15min-PTB-bot`.
+**When to use:** You want **several coins**, **one wallet**, **terminal + optional web dashboard**, and **explicit exit rules**. **When not to:** You need **BTC-only VWAP/momentum** filters—use `btc-binary-VWAP-Momentum-bot`—or **PTB vs spot diff** rules—use `5min-15min-PTB-bot`.
 
 ---
 
@@ -67,7 +67,7 @@ Automated execution for Polymarket **5- or 15-minute** crypto Up/Down markets. R
 
 ```bash
 git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools/bots/up-down-spread-bot
+cd polymarket-arbitrage-trading-bot-tools/up-down-spread-bot
 ```
 
 ### 2. Create Virtual Environment
@@ -179,7 +179,7 @@ python3 main.py
 ## Project Structure
 
 ```
-bots/up-down-spread-bot/
+up-down-spread-bot/
 ├── src/
 │   ├── main.py                 # Main entry point
 │   ├── strategy.py             # Late Entry V3 strategy
@@ -280,4 +280,4 @@ MIT License
 
 ## Disclaimer
 
-This software is for **educational and research purposes only**. Trading on prediction markets involves **substantial risk**; you may lose **all** funds you deploy. **Past results do not guarantee future performance.** Authors are **not** liable for losses. For **licensing**, **custom strategies**, or **advanced quant tooling** (Kelly, Monte Carlo, martingale / anti-martingale frameworks, RSI/MACD/Bollinger stacks, Bayesian edge models, etc.), contact [@AlterEgo_Eth](https://t.me/AlterEgo_Eth). See the [repository README](../../README.md).
+This software is for **educational and research purposes only**. Trading on prediction markets involves **substantial risk**; you may lose **all** funds you deploy. **Past results do not guarantee future performance.** Authors are **not** liable for losses. For **licensing**, **custom strategies**, or **advanced quant tooling** (Kelly, Monte Carlo, martingale / anti-martingale frameworks, RSI/MACD/Bollinger stacks, Bayesian edge models, etc.), contact [@AlterEgo_Eth](https://t.me/AlterEgo_Eth). See the [repository README](../README.md).

@@ -2,7 +2,7 @@
 
 Automated trading bot for **Polymarket BTC Up/Down** binary markets (**5- or 15-minute** windows; set `market.interval_minutes` in `config.json`). It streams the CLOB via WebSocket, computes **VWAP**, **deviation**, **momentum**, and **z-score** on the **favorite** side, and fires **Fill-And-Kill (FAK)** entries when **all** conditions align. Optional **Good-Till-Date (GTD)** limits on the opposite token act as a **partial hedge** (advanced; off by default).
 
-**Suite:** This bot is part of the [Poly-Tutor Polymarket suite](../../README.md). **Repository:** [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) · **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth)
+**Suite:** This bot is part of the [Poly-Tutor Polymarket suite](../README.md). **Repository:** [github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools](https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git) · **Telegram:** [@AlterEgo_Eth](https://t.me/AlterEgo_Eth)
 
 ---
 
@@ -14,7 +14,7 @@ Automated trading bot for **Polymarket BTC Up/Down** binary markets (**5- or 15-
 
 **Risk:** Binary markets can **gap** or **flip** into the close. **Break-even win rate ≈ entry price** before fees. **Slippage**, **partial fills**, and **oracle resolution** details can erode edge. **Start small**; use **`simulation`** in config when available.
 
-**Good fit:** You want **BTC only**, **transparent math** (see [PROJECT_LOGIC.md](PROJECT_LOGIC.md)), and a **Rich** terminal dashboard. **Poor fit:** You need multi-asset from one process—use **Meridian** (`bots/up-down-spread-bot`) in the same suite.
+**Good fit:** You want **BTC only**, **transparent math** (see [PROJECT_LOGIC.md](PROJECT_LOGIC.md)), and a **Rich** terminal dashboard. **Poor fit:** You need multi-asset from one process—use **Meridian** (`up-down-spread-bot`) in the same suite.
 
 ---
 
@@ -44,7 +44,7 @@ The bot identifies the "favorite" (the token with higher probability), waits for
 ## Project Structure
 
 ```
-bots/btc-binary-VWAP-Momentum-bot/
+btc-binary-VWAP-Momentum-bot/
 |-- main.py                 # Main bot: dashboard, signals, execution, all core logic
 |-- config.json             # Trading parameters (strategy, entry, hedge, etc.)
 |-- .env.example            # Environment variables template (copy to .env)
@@ -91,7 +91,7 @@ python3 --version
 ```bash
 cd ~
 git clone https://github.com/Poly-Tutor/polymarket-arbitrage-trading-bot-tools.git
-cd polymarket-arbitrage-trading-bot-tools/bots/btc-binary-VWAP-Momentum-bot
+cd polymarket-arbitrage-trading-bot-tools/btc-binary-VWAP-Momentum-bot
 ```
 
 ### Step 3: Create Virtual Environment
@@ -264,7 +264,7 @@ For a deep technical dive including all formulas, architecture diagrams, and the
 
 ## Disclaimer
 
-This software is provided **for educational and research purposes only**. Trading on prediction markets involves **substantial risk**; you may **lose your entire stake**. **No performance is guaranteed.** The authors and contributors are **not** responsible for financial losses, bugs, or exchange rule changes. Use **simulation** where offered, keep **API keys and private keys** secret, and **never** trade with capital you cannot afford to lose. For **extended quant strategies** (Kelly, Monte Carlo, advanced TA, sizing systems), see the [repository README](../../README.md) and contact [@AlterEgo_Eth](https://t.me/AlterEgo_Eth).
+This software is provided **for educational and research purposes only**. Trading on prediction markets involves **substantial risk**; you may **lose your entire stake**. **No performance is guaranteed.** The authors and contributors are **not** responsible for financial losses, bugs, or exchange rule changes. Use **simulation** where offered, keep **API keys and private keys** secret, and **never** trade with capital you cannot afford to lose. For **extended quant strategies** (Kelly, Monte Carlo, advanced TA, sizing systems), see the [repository README](../README.md) and contact [@AlterEgo_Eth](https://t.me/AlterEgo_Eth).
 
 ## License
 
