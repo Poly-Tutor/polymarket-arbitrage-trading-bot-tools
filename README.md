@@ -251,13 +251,13 @@ Software has bugs; markets have tail risk. Use small size, isolated wallets, and
 
 ### Where do I get help or custom strategies?
 
-For **custom deployment**, **additional strategies**, or **professional risk frameworks**, contact **[Telegram @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**.
+For **custom deployment**, **additional strategies**, or **professional risk frameworks**.
 
 ---
 
 ## Extended strategies (separate offerings)
 
-Beyond these three open folders, **AlterEgo Eth** works on advanced quant-style ideas (sizing sequences, TA combinations, execution-aware models, inventory/skew concepts, Monte Carlo for drawdown, etc.). These are **not** all shipped as drop-in modules here. For **access, customization, or collaboration**, use **[Telegram: @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**.
+Beyond these three open folders, **AlterEgo Eth** works on advanced quant-style ideas (sizing sequences, TA combinations, execution-aware models, inventory/skew concepts, Monte Carlo for drawdown, etc.). These are **not** all shipped as drop-in modules here. For **access, customization, or collaboration**.
 
 ---
 This suite is **educational and experimental**. Use **simulation / dry-run** first, size small, and own your risk.
