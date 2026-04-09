@@ -1,4 +1,4 @@
-# Polymarket Trading Bot — Polymarket Arbitrage Trading Bot & Automation Toolkit
+# Polymarket 5min, 15min, 1hour Trading Bot — Polymarket Arbitrage Trading Bot & Automation Toolkit
 
 
 
