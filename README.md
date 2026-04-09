@@ -47,6 +47,37 @@ https://github.com/user-attachments/assets/0e9bfcf2-950a-41bc-8318-a20f8de78866
 If you want **additional strategies**, **custom deployment**, or **professional risk and sizing** beyond this public suite, reach out on **[Telegram @AlterEgo_Eth](https://t.me/AlterEgo_Eth)**. For **bots oriented toward live profitability**—more advanced signals, sizing, and execution—contact the same channel; availability and terms are discussed individually.
 
 ---
+---
+
+## Screenshots & demo
+
+Visual references for dashboards and flows (replace or extend with your own recordings as the **Polymarket arbitrage trading bot** suite evolves).
+
+### VWAP / momentum (BTC binary bot)
+
+https://github.com/user-attachments/assets/4c528411-6d88-4843-adf8-26c26f63288e
+
+<img width="1224" height="487" alt="Polymarket trading bot VWAP momentum dashboard" src="https://github.com/user-attachments/assets/450211b1-531f-4abc-aaf0-3d7ab28937d2" />
+
+<img width="1204" height="702" alt="Polymarket bot terminal UI" src="https://github.com/user-attachments/assets/250c75e5-93ea-4e04-9d29-9912a93deced" />
+
+### Meridian / late consensus (`late_v3`)
+
+https://github.com/user-attachments/assets/c811e320-3a0a-4cbe-9cec-8b7a42c0cf6d
+
+<img width="1159" height="522" alt="Polymarket arbitrage trading bot Meridian spread view" src="https://github.com/user-attachments/assets/e60063c1-67a4-4298-b72f-063ac2bfb94d" />
+
+<img width="1240" height="899" alt="Prediction market bot multi-asset dashboard" src="https://github.com/user-attachments/assets/158b038c-2952-4fb6-9278-f3d6dfd1afe6" />
+
+### PTB bot (5m / 15m)
+
+https://github.com/user-attachments/assets/bfdf7590-5458-4883-88cf-b8343a316f6f
+
+<img width="1369" height="914" alt="Polymarket API bot PTB web dashboard" src="https://github.com/user-attachments/assets/1c1e654b-e79f-4f3f-b159-14681c07ac6c" />
+
+<img width="1359" height="906" alt="Automated trading bot PTB controls" src="https://github.com/user-attachments/assets/3291ca28-51a5-45e2-983f-748bd6bcbb76" />
+
+---
 
 ## Table of contents
 
@@ -144,37 +175,7 @@ Configuration is **per bot**:
 
 You can run more than one **polymarket trading bot** only if you understand **collateral**, **nonce / rate limits**, and **position overlap**—typically use **separate wallets** or **non-overlapping** markets.
 
----
 
-## Screenshots & demo
-
-Visual references for dashboards and flows (replace or extend with your own recordings as the **Polymarket arbitrage trading bot** suite evolves).
-
-### VWAP / momentum (BTC binary bot)
-
-https://github.com/user-attachments/assets/4c528411-6d88-4843-adf8-26c26f63288e
-
-<img width="1224" height="487" alt="Polymarket trading bot VWAP momentum dashboard" src="https://github.com/user-attachments/assets/450211b1-531f-4abc-aaf0-3d7ab28937d2" />
-
-<img width="1204" height="702" alt="Polymarket bot terminal UI" src="https://github.com/user-attachments/assets/250c75e5-93ea-4e04-9d29-9912a93deced" />
-
-### Meridian / late consensus (`late_v3`)
-
-https://github.com/user-attachments/assets/c811e320-3a0a-4cbe-9cec-8b7a42c0cf6d
-
-<img width="1159" height="522" alt="Polymarket arbitrage trading bot Meridian spread view" src="https://github.com/user-attachments/assets/e60063c1-67a4-4298-b72f-063ac2bfb94d" />
-
-<img width="1240" height="899" alt="Prediction market bot multi-asset dashboard" src="https://github.com/user-attachments/assets/158b038c-2952-4fb6-9278-f3d6dfd1afe6" />
-
-### PTB bot (5m / 15m)
-
-https://github.com/user-attachments/assets/bfdf7590-5458-4883-88cf-b8343a316f6f
-
-<img width="1369" height="914" alt="Polymarket API bot PTB web dashboard" src="https://github.com/user-attachments/assets/1c1e654b-e79f-4f3f-b159-14681c07ac6c" />
-
-<img width="1359" height="906" alt="Automated trading bot PTB controls" src="https://github.com/user-attachments/assets/3291ca28-51a5-45e2-983f-748bd6bcbb76" />
-
----
 
 ## Risk management snapshot
 
